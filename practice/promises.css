@@ -1,0 +1,38 @@
+body {
+    margin: 20px;
+    padding: 0;
+    /* background: ; */
+}
+
+.container {
+    max-width: 70%;
+    margin: auto;
+    border: #fff solid 3px; 
+    background: gainsboro;  
+}
+
+
+.books {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-gap: 10px; */
+    column-gap: 10px;
+    row-gap: 20px;
+}
+
+.title {
+    text-align: left;
+    font-weight: bold;
+    /* padding: 0px; */
+    /* margin-top: 10px; */
+    /* margin-bottom: 10px; */
+} 
+
+.book {
+    margin-left: 70px;
+}
+
+.book img{
+    margin-top: 10px;
+}
+

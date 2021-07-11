@@ -45,10 +45,19 @@ function createPost(post){
 // async await with fetch
 
 async function fetchUsers(){
-    const res = await fetch('https://jsonplaceholder.typicode.com/users');
+    // const res = await fetch('https://jsonplaceholder.typicode.com/users');
+    const res = await fetch('https://www.googleapis.com/books/v1/volumes?q=isbn:9781451648546')
     const data = await res.json();
 
     console.log(data);
+    const book = await data.items[0];
+    let title = (book["volumeInfo"]["title"]);
+    let image = book['volumeInfo']['imageLinks']['thumbnail'];
+    console.log(title);
+    console.log(image);
+    const ii = document.querySelectorAll('#cover');
+    //ii.src = image;
+    ii.forEach(img => img.src = image);
 }
 
 fetchUsers();
